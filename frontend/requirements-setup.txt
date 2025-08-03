@@ -1,0 +1,7 @@
+tailwind-css
+daisyui 
+react-router
+react-hot-toast
+axios 
+react-query /tanstack
+setting cors
