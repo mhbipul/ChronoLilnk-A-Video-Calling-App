@@ -5,3 +5,5 @@ react-hot-toast
 axios 
 react-query /tanstack
 setting cors
+https://storyset.com/ -> for downloading illustrated photos for free.
+7E57C2
