@@ -195,5 +195,5 @@ export const THEMES = [
     italian: "it",
     turkish: "tr",
     dutch: "nl",
-    bangla : "ban"
+    bangla : "bd"
   };
