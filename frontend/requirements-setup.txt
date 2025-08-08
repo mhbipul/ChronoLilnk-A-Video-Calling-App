@@ -7,3 +7,6 @@ react-query /tanstack
 setting cors
 https://storyset.com/
 7E57C2
+
+# for selecting various theme
+ZUSTAND
