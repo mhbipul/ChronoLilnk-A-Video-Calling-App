@@ -61,7 +61,7 @@ export async function sendFriendRequest(req,res) {
         }
 
         //checking if the recipient is eligiable ...
-        const recipient = await User.findById({recipientId});
+        const recipient = await User.findById(recipientId);
         if(!recipient){
             return res.status(400).json({message:"Recipient not found"});
         }
