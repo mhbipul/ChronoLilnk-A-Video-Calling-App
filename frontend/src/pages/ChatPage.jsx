@@ -63,6 +63,7 @@ const ChatPage = () => {
         // you and me
         // if i start the chat => channelId: [myId, yourId]
         // if you start the chat => channelId: [yourId, myId]  => [myId,yourId]
+        // as the computer will not understand that these 2 are same array , that's why we use sort() to make it understand !
 
         const currChannel = client.channel("messaging", channelId, {
           members: [authUser._id, targetUserId],
