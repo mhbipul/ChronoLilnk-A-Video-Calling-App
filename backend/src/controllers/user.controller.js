@@ -110,7 +110,7 @@ export async function  acceptFriendRequest(req,res) {
         const {id : requestId } = req.params;
 
         //finding the friend request in db 
-        const friendRequest = await FriendRequest.findById({requestId});
+        const friendRequest = await FriendRequest.findById(requestId);
 
         //#chekc 1 : if the friendrequest is existing or not ...
         if(!friendRequest){
@@ -156,7 +156,7 @@ export async function getFriendRequests(req,res) {
             recipient : req.user.id,
             status : "pending",
 
-        }).populate("sender","fullName, profilePic  nativeLanguage learningLanguage");
+        }).populate("sender","fullName profilePic  nativeLanguage learningLanguage");
 
         const accepetedReqs = await FriendRequest.find({
             sender : req.user.id,
@@ -164,7 +164,7 @@ export async function getFriendRequests(req,res) {
 
         }).populate("recipient","fullName profilePic");
 
-        res.status(200).json(incomingReqs,accepetedReqs)
+        res.status(200).json({incomingReqs,accepetedReqs})
         
     } catch (error) {
         console.error("Error in getFriendRequests Controller",error.message);
